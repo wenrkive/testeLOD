@@ -1,0 +1,250 @@
+body, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a2e;
+  color: white;
+}
+
+header {
+  background-color: #000000;
+  padding: 15px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.menu .logo {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Estilo do botão com efeito de preenchimento ao passar o mouse */
+.join-btn {
+  background: black; /* Cor de fundo inicial */
+  color: white; /* Cor do texto */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px; /* Cantos arredondados */
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease; /* Transição suave */
+  box-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 30px #ff007f; /* Efeito neon */
+}
+
+/* Efeito de preenchimento transversal ao passar o mouse */
+.join-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* Começa fora do botão */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 0, 127, 0.5), rgba(255, 0, 127, 0.3)); /* Gradiente rosa transparente */
+  transition: left 0.5s ease; /* Transição suave */
+  z-index: 0;
+}
+
+.join-btn:hover::before {
+  left: 0; /* Preenche o botão ao passar o mouse */
+}
+
+/* Texto do botão */
+.join-btn span {
+  position: relative;
+  z-index: 1; /* Garante que o texto fique acima do efeito */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.join-btn:hover {
+  transform: scale(1.1); /* Aumenta o tamanho do botão */
+  box-shadow: 0 0 15px #ff007f, 0 0 30px #ff007f, 0 0 45px #ff007f; /* Brilho neon mais intenso */
+}
+
+/* Efeito de clique */
+.join-btn:active {
+  transform: scale(0.95); /* Reduz o tamanho ao clicar */
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.hero p {
+  text-shadow: 
+    0 0 5px #080004, /* Sombra rosa neon */
+    0 0 10px #c7afbb, 
+    0 0 20px #ff0080, 
+    0 0 40px #00ff15;
+  }
+  
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que o vídeo cubra toda a área */
+  z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* Garante que o conteúdo fique acima do vídeo */
+}
+
+h1 {
+  font-size: 48px;
+  color: #070707;
+  margin: 0; /* Remove margens padrão */
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  align-items: center; /* Centraliza os botões verticalmente */
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+.join, .more {
+  background-color: #ff4b5c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s;
+}
+
+.join:hover, .more:hover {
+  background-color: #e63946; /* Cor ao passar o mouse */
+}
+
+/* Estilo para os botões redondos (Discord e WhatsApp) */
+.discord-btn, .whatsapp-btn {
+  background: black; /* Cor de fundo inicial */
+  color: white; /* Cor do texto */
+  border: none;
+  padding: 15px; /* Padding para um círculo mais uniforme */
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%; /* Torna o botão redondo */
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease; /* Transição suave */
+  box-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 30px #ff007f; /* Efeito neon */
+  width: 60px; /* Largura fixa para garantir que seja um círculo */
+  height: 60px; /* Altura fixa para garantir que seja um círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efeito de preenchimento transversal ao passar o mouse */
+.discord-btn::before, .whatsapp-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* Começa fora do botão */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 0, 127, 0.5), rgba(255, 0, 127, 0.3)); /* Gradiente rosa transparente */
+  transition: left 0.5s ease; /* Transição suave */
+  z-index: 0;
+}
+
+.discord-btn:hover::before, .whatsapp-btn:hover::before {
+  left: 0; /* Preenche o botão ao passar o mouse */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.discord-btn:hover, .whatsapp-btn:hover {
+  transform: scale(1.1); /* Aumenta o tamanho do botão */
+  box-shadow: 0 0 15px #ff007f, 0 0 30px #ff007f, 0 0 45px #ff007f; /* Brilho neon mais intenso */
+}
+
+/* Efeito de clique */
+.discord-btn:active, .whatsapp-btn:active {
+  transform: scale(0.95); /* Reduz o tamanho ao clicar */
+}
+
+/* Ícones dentro dos botões */
+.discord-btn i, .whatsapp-btn i {
+  font-size: 24px; /* Tamanho do ícone */
+  color: white; /* Cor do ícone */
+  z-index: 1; /* Garante que o ícone fique acima do efeito */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu .logo {
+    margin-bottom: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px; /* Título menor em dispositivos móveis */
+  }
+
+  .hero-content p {
+    font-size: 16px; /* Parágrafo menor em dispositivos móveis */
+  }
+
+  .buttons {
+    flex-direction: row; /* Mantém os botões um ao lado do outro */
+    gap: 10px; /* Espaçamento entre os botões */
+  }
+
+  .join, .more {
+    width: 100%; /* Botões ocupam toda a largura */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 24px; /* Título ainda menor para telas muito pequenas */
+  }
+
+  .hero-content p {
+    font-size: 14px; /* Parágrafo ainda menor para telas muito pequenas */
+  }
+
+  .buttons {
+    flex-direction: row; /* Mantém os botões um ao lado do outro */
+    gap: 5px; /* Reduz o espaçamento para telas muito pequenas */
+  }
+
+  .discord-btn, .whatsapp-btn {
+    width: 50px; /* Reduz o tamanho dos botões */
+    height: 50px; /* Reduz o tamanho dos botões */
+  }
+
+  .discord-btn i, .whatsapp-btn i {
+    font-size: 20px; /* Reduz o tamanho dos ícones */
+  }
+}
