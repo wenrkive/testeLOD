@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League Of Divas</title>
+    <link rel="stylesheet" href="/inicial/styles.css">
+    <!-- Adicionar FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="main-content">
+        <!-- Banner -->
+        <div class="banner-container">
+            <img src="/imagens/banners/header.png" alt="Banner" class="banner-image">
+        </div>
+        
+        <!-- Seção de recursos -->
+        <section class="features">
+            <div class="feature-box">Suporte</div>
+            <div class="feature-box">Grupos</div>
+
+        </section>
+
+<!-- Cards -->
+<div class="container">
+  <div class="card" data-target="apresentacao">
+    <img src="/imagens/abas/apresentação.png" alt="Apresentação" />
+  </div>
+  <div class="card" data-target="eventos">
+    <img src="/imagens/abas/eventos.png" alt="Eventos" />
+  </div>
+  <div class="card" data-target="quemsomos">
+    <img src="/imagens/abas/quemsomos.png" alt="Quem Somos" />
+  </div>
+  <div class="card" data-target="lojaoficial">
+    <img src="/imagens/abas/lojaoficial.png" alt="Loja Oficial" />
+  </div>
+</div>
+
+<div id="modal" style="display: none; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; 
+  width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); z-index: 9999;">
+  <img id="modal-image" style="max-width: 90%; max-height: 90%; border-radius: 10px;" />
+</div>
+
+<!-- Conteúdo dinâmico -->
+<div id="conteudo-dinamico" class="dynamic-container">
+  <p>Escolha uma aba acima para ver mais detalhes.</p>
+</div>
+</div>
+    </div>
+    <script src="inicial/script.js"></script>
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-banner">
+      <div class="footer-info">
+        <p>© 2025 League of Divas. Todos os direitos reservados.</p>
+        <div class="footer-icons">
+          <a href="https://wa.me/seunumero" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://discord.gg/seulink" target="_blank">
+            <i class="fab fa-discord"></i>
+          </a>
+          <a href="https://instagram.com/seuperfil" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com/@seuusuario" target="_blank">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+      <img src="/imagens/stickers/Ilustração114 (2).png" alt="Banner" class="footer-image" />
+    </div>  
+  </div>
+</footer>
+  <script src="app.js"></script>
+
+</body>
+</html>
